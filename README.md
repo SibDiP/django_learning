@@ -1,5 +1,7 @@
 # djangoGirls_blog_tutorial
 
+Blog-making tutorial from djangogirls.org (Python, django) 
+
 [Tutorial Link](https://tutorial.djangogirls.org/en/)
 
 ---

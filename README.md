@@ -1,10 +1,4 @@
-# django_learning
+# Writing_your_first_Django_app
 
-Each project in own branch.
-
----
-0. main - default branch.
-1. djangogils_blog - blog-making tutorial from djangogirls.org (Python, django) 
-[Tutorial Link](https://tutorial.djangogirls.org/en/)
-2. Writing_your_first_Django_app - official documentation tutorial on djangoproject.com
+- official documentation tutorial on djangoproject.com
 [Tutorial Link](https://docs.djangoproject.com/en/4.1/intro/)

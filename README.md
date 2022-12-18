@@ -1,12 +1,10 @@
-# djangoGirls_blog_tutorial
+# django_learning
 
-Blog-making tutorial from djangogirls.org (Python, django) 
-
-[Tutorial Link](https://tutorial.djangogirls.org/en/)
+Each project in own branch.
 
 ---
-
-Setup:
-- Python 3.8
-- django 4.1.3
-- venv
+0. main - default branch.
+1. djangogils_blog - blog-making tutorial from djangogirls.org (Python, django) 
+[Tutorial Link](https://tutorial.djangogirls.org/en/)
+2. Writing_your_first_Django_app - official documentation tutorial on djangoproject.com
+[Tutorial Link](https://docs.djangoproject.com/en/4.1/intro/)

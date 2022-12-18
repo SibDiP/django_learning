@@ -4,6 +4,7 @@ Blog-making tutorial from djangogirls.org (Python, django)
 
 [Tutorial Link](https://tutorial.djangogirls.org/en/)
 
+Revew: good to try django, but bad for deep learning.
 ---
 
 Setup:

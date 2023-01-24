@@ -56,16 +56,14 @@ from .models import Choice, Question
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
-
     def get_queryset(self):
         """
         Return the last five published questions (not including those set to be
-        published in the future).
+        published in the future and those which doesn't have a choice).
         """
         return Question.objects.filter(
             pub_date__lte=timezone.now()
-        ).order_by('-pub_date')[:5]
-
+        ).exclude(choice__isnull=True).order_by('-pub_date')[:5]
 
 class DetailView(generic.DetailView):
     model = Question
@@ -75,7 +73,7 @@ class DetailView(generic.DetailView):
         """
         Excludes any questions that aren't published yet.
         """
-        return Question.objects.filter(pub_date__lte=timezone.now())
+        return Question.objects.filter(pub_date__lte=timezone.now()).exclude(choice__isnull=True)
 
 
 class ResultsView(generic.DetailView):
@@ -86,7 +84,7 @@ class ResultsView(generic.DetailView):
         """
         Excludes any result that aren't published yet.
         """
-        return Question.objects.filter(pub_date__lte=timezone.now())
+        return Question.objects.filter(pub_date__lte=timezone.now()).exclude(choice__isnull=True)
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

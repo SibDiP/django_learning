@@ -193,14 +193,30 @@ class QuestionResultViewTest(TestCase):
 
 class VoteTest(TestCase):
     def setUp(self) -> None:
+        self.client = Client()
         self.question = create_question()
         self.choice = create_choice(self.question)
     def test_vote_view_with_valid_choice_change_votes_counter(self):
+        """
+        The result of post form with valid choice is changing votes += 1
+        """
         self.client.post(reverse('polls:vote', args=(self.question.id,)), {'choice': self.choice.id})
         self.client.post(reverse('polls:vote', args=(self.question.id,)), {'choice': self.choice.id})
         self.assertEqual(Choice.objects.get(pk=self.choice.id).votes, 2)
 
+    def test_vote_view_with_valid_choice_redirect_to_details(self):
+        """
+        The result of post form with valid choice is redirection to <int:pk>/results page
+        """
+        response = self.client.post(reverse('polls:vote', args=(self.question.id,)), {'choice': self.choice.id})
+        self.assertEqual(response.status_code, 302)
+        self.assertURLEqual(response.url, reverse('polls:results', args=(self.question.id,)))
+
+
     def test_vote_view_with_invalid_choice(self):
+        """
+        The result of post form without selected choice is error message
+        """
         response = self.client.post(reverse('polls:vote', args=(self.question.id,)), {})
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "You didn&#x27;t select a choice.")

@@ -1,0 +1,11 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ 'Wednesday poll admin' }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ 'Which Character From "Wednesday" Are You?' }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+

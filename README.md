@@ -5,7 +5,7 @@
 
 ---
 # What?
--Django App for polls.
+- Django App for polls.
 
 # What exactly?
 - Two connectd models (Question & Answer)

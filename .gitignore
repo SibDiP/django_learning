@@ -1,3 +1,5 @@
+.env_dev
+.env_prod
 # Python
 *.pyc
 *~

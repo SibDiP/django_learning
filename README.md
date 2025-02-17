@@ -10,4 +10,4 @@ Each project in own branch.
 [Tutorial Link](https://docs.djangoproject.com/en/4.1/intro/)
 3. [Django for everybody](https://github.com/SibDiP/django_learning/tree/dj4e) - big learning course by Charles Severance (MIT professor)
 [Course Link](https://www.dj4e.com/)
-4. [Книга Python Crash Course, 3rd Edition | Learning Log](https://github.com/SibDiP/django_learning/tree/python_crash_course_learning_log) - small blog-like app.
+4. [Book | Python Crash Course, 3rd Edition | Learning Log](https://github.com/SibDiP/django_learning/tree/python_crash_course_learning_log) - small blog-like app.

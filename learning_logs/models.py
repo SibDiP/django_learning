@@ -22,5 +22,8 @@ class Entry(models.Model):
     
     def __str__(self):
         """Return a simple string representing the entry."""
-        return f"{self.text[:50]...}"
+        return f"{self.text[:50]}..."
+
+class Thumbnail(models.Model):
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
 
